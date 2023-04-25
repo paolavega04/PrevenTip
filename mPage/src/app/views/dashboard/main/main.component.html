@@ -1,0 +1,82 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <div class="main-div">
+        <mat-card-header>
+            <mat-card class="example-card">
+                Crea tu cuenta
+                <form class="example-form">
+                    <mat-form-field>
+                        <mat-label>Nombre/s</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Apellido paterno</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </form>
+                <form>
+                    <mat-form-field>
+                        <mat-label>Apellido paterno</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Sexo</mat-label>
+                        <mat-select>
+                            <mat-option value="one">First option</mat-option>
+                            <mat-option value="two">Second option</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+
+                <form>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Ciudad</mat-label>
+                        <mat-select>
+                            <mat-option value="one">First option</mat-option>
+                            <mat-option value="two">Second option</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Estado</mat-label>
+                        <mat-select>
+                            <mat-option value="one">First option</mat-option>
+                            <mat-option value="two">Second option</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+                <form>
+                    <mat-form-field>
+                        <mat-label>Correo</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Telefono</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </form>
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+
+                <div>
+                    <mat-form-field>
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+
+                <div class="example-button-row">
+                    
+                </div>
+            </mat-card>
+        </mat-card-header>
+
+    </div>
+
+</div>

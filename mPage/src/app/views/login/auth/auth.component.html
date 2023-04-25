@@ -1,0 +1,23 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>
+                <img class="logo" src="./../assets/images/logo.png" alt="preventip" width="60%" height="60%" />
+            </mat-card-title>
+        </mat-card-header>
+            <mat-card-content>
+                <h4 class="inicio-sesion">Inicia sesión con tu huella o registrate</h4>
+                
+                <button (click)="login()" mat-stroked-button  class="login-btn">
+                    <i aria-hidden="true"></i>
+                    Crear cuenta
+                </button>
+                <p></p>
+                <button mat-button routerLink="/home" style="height:auto; width: auto;">
+                    <img class="huella" src="./../assets/images/huella.png" alt="preventip" width="70%" height="70%" />
+                </button>
+                
+
+            </mat-card-content>
+    </mat-card>
+</div>
