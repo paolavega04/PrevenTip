@@ -79,20 +79,14 @@ body {
     width: 100%;
 }
 
-.inicio-sesion{
-    color: #5da337;
-    text-align: center;
-    font-size: 30px;
-}
-
 .login-wrapper .example-full-width,
 .login-wrapper .login-btn {
     width: 100%;
-    font-size: 22px;
+    font-size: medium;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     background-color: #5da337;
     color: #ffffff;
-    line-height: 65px;
-    height: 65px;
 }
 
 .login-wrapper mat-card-header {
