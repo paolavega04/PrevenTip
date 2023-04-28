@@ -30,15 +30,6 @@ export class AuthService {
     private router: Router
   ) {}
 
-  signup(user: Omit<User, "id">): Observable<User> {
-    return this.http
-      .post<User>('${this.url}/signup', user, this.httpOptions)
-      .pipe(
-        first(),
-        catchError(this.errorHandlerService.handleError<User>("signup"))
-      );
-  }
-
   login(
     email: Pick<User, "email">,
     password: Pick<User, "password">
@@ -47,7 +38,7 @@ export class AuthService {
     userId: Pick<User, "id">;
   }> {
     return this.http
-      .post('${this.url}/login', { email, password }, this.httpOptions)
+      .post(`${this.url}/login`, { email, password }, this.httpOptions)
       .pipe(
         first(Object),
         tap((tokenObject: { token: string; userId: Pick<User, "id"> }) => {

@@ -10,20 +10,32 @@ import { AuthService } from "src/app/services/auth.service";
   styleUrls: ['./login.component.css'],
 })
 
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
 
-  constructor(private router: Router) {}
+  // TUTORIAL
+  constructor(private authService: AuthService) {}
 
+  // TUTORIAL
   ngOnInit(): void {
-    this.loginForm = new FormGroup({
-      email: new FormControl(''),
-      psw: new FormControl(''),
+    this.loginForm = this.createFormGroup();
+  }
+
+  createFormGroup(): FormGroup {
+    return new FormGroup({
+      email: new FormControl("", [Validators.required, Validators.email]),
+      password: new FormControl("", [
+        Validators.required,
+        Validators.minLength(7),
+      ]),
     });
   }
 
+  // TUTORIAL
   login(){
-    this.router.navigate(['dashboard']);
+    this.authService
+      .login(this.loginForm.value.email, this.loginForm.value.password)
+      .subscribe();
   }
 
 }
