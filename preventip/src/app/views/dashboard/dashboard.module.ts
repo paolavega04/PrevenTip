@@ -5,18 +5,19 @@ import { RouterModule } from '@angular/router';
 import { AngularMaterialsModule } from 'src/app/angular-materials/angular-materials.module';
 import { OrderComponent } from './order/order.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { NavbarComponent } from 'src/app/shared/navbar/navbar.component';
+
 
 
 @NgModule({
   declarations: [
     MainComponent,
-    OrderComponent,
+    OrderComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    AngularMaterialsModule
+    AngularMaterialsModule,
+    SharedModule
   ]
 })
 export class DashboardModule { }
