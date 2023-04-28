@@ -23,6 +23,7 @@ exports.login = async (req, res, next) => {
     const isEqual = password == storedUser.password;
 
 
+
     if (!isEqual) {
       const error = new Error('Contrasena equivocada.');
       error.statusCode = 401;
