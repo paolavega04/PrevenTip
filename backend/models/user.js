@@ -8,15 +8,14 @@ module.exports = class User {
   }
 
   static find(email) {
-    return db.execute('SELECT * FROM clientes WHERE correo = ?', [email]);
+    return db.query('SELECT * FROM users WHERE email = ?;', [email]);
   }
 
   static save(user) {
     return db.execute(
-      'INSERT INTO clientes (nombre, correo, contrasena) VALUES (?, ?, ?)',
+      'INSERT INTO users (name, email, password) VALUES (?, ?, ?)',
       [user.name, user.email, user.password]
     );
   }
-
 };
 
