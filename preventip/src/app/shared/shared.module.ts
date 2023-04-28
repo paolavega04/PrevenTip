@@ -8,7 +8,6 @@ import { AngularMaterialsModule } from '../angular-materials/angular-materials.m
 
 @NgModule({
   declarations: [
-    NavbarComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +15,6 @@ import { AngularMaterialsModule } from '../angular-materials/angular-materials.m
     AngularMaterialsModule
   ],
   exports: [
-    NavbarComponent
   ]
 })
 export class SharedModule { }
