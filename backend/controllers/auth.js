@@ -11,6 +11,7 @@ exports.login = async (req, res, next) => {
   const password = req.body.password;
   try {
     const user = await User.find(email);
+    console.log(email)
 
     if (user[0].length !== 1) {
       const error = new Error('No se pudo encontrar este usuario.');

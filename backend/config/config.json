@@ -1,6 +1,6 @@
 {
-    "host": "localhost",
-    "user": "root",
-    "database": "POSTS",
-    "password": "password"
+    "host": "187.161.118.2",    
+    "user": "monstruito",    
+    "database": "proyecto_salud",
+    "password": "montalvoinc"
 }

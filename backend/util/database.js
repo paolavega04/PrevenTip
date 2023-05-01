@@ -1,11 +1,15 @@
 const mysql = require('mysql2');
 const config = require('../config/config.json');
 
-const pool = mysql.createPool({
-    host:config.host,
-    user:config.user,
-    password:config.password,
-    database:config.database
+const connection = mysql.createConnection({
+    host:"3.14.73.75",
+    user:"monstruito",
+    password:"montalvoinc",
+    database:"proyecto_salud",
+    connectionLimit:10,
+    ssl: {
+         rejectUnauthorized:false
+    }
 });
 
-module.exports = pool.promise();
+module.exports = connection.promise();

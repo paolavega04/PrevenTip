@@ -1,3 +1,4 @@
+const Connection = require('mysql2/typings/mysql/lib/Connection');
 const db = require('../util/database');
 
 module.exports = class User {
@@ -11,11 +12,14 @@ module.exports = class User {
     return db.query('SELECT * FROM users WHERE email = ?;', [email]);
   }
 
+
   static save(user) {
     return db.execute(
       'INSERT INTO users (name, email, password) VALUES (?, ?, ?)',
-      [user.name, user.email, user.password]
+      [user.name, user.email, user.password],
     );
   }
+  
 };
+
 
